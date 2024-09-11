@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Home Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-brand {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #003366; /* Dark blue color */
+        }
+
+        .navbar-brand img {
+            max-height: 50px;
+        }
+
+        .nav-link {
+            font-weight: 500;
+            color: #003366; /* Dark blue color */
+            transition: color 0.3s;
+        }
+
+        .nav-link:hover {
+            color: #007bff;
+        }
+
+        /* Hero Section Styles */
+        #home {
+            background-color: rgba(0, 0, 0, 0.5);
+            background-blend-mode: darken;
+            color: #fff;
+            padding: 150px 0;
+            text-align: center;
+            background-image: url('https://www.example.com/swami-vivekananda-college.jpg'); /* Update with the actual image URL */
+            background-size: cover;
+            background-position: center;
+        }
+
+        #home h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        #home p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 1rem;
+            transition: background-color 0.3s;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+
+        /* About Section Styles */
+        #about h2 {
+            font-size: 2.8rem;
+            margin-bottom: 30px;
+            font-weight: bold;
+            color: #003366; /* Dark blue color */
+        }
+
+        #about p {
+            font-size: 1.125rem;
+            color: #555;
+        }
+
+        #about .col-lg-4 {
+            margin-bottom: 30px;
+        }
+
+        #about h4 {
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+            font-weight: bold;
+            color: #003366; /* Dark blue color */
+        }
+
+        /* Departments Section Styles */
+        #departments {
+            padding: 80px 0;
+        }
+
+        #departments h2 {
+            font-size: 2.8rem;
+            margin-bottom: 30px;
+            font-weight: bold;
+            color: #003366; /* Dark blue color */
+        }
+
+        .card {
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .card-img-top {
+            border-radius: 10px;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #003366; /* Dark blue color */
+        }
+
+        /* Testimonials Section Styles */
+        #testimonials {
+            background-color: #f8f9fa;
+            padding: 80px 0;
+        }
+
+        #testimonials h2 {
+            font-size: 2.8rem;
+            margin-bottom: 30px;
+            font-weight: bold;
+            color: #003366; /* Dark blue color */
+        }
+
+        blockquote {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        blockquote p {
+            font-size: 1.125rem;
+            margin-bottom: 10px;
+        }
+
+        blockquote footer {
+            font-size: 0.875rem;
+            color: #6c757d;
+        }
+
+        /* Contact Section Styles */
+        #contact {
+            background-color: #343a40;
+            padding: 80px 0;
+        }
+
+        #contact h2 {
+            font-size: 2.8rem;
+            margin-bottom: 30px;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        #contact h5 {
+            font-size: 1.25rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        #contact p {
+            font-size: 1rem;
+            color: #ccc;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #6c757d;
+            padding: 40px 0;
+            color: #fff;
+            text-align: center;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+        }
+
+        footer ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        footer ul li {
+            display: inline;
+            margin-right: 15px;
+        }
+
+        footer ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        footer ul li a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="https://www.careerguide.com/career/wp-content/uploads/2023/09/VESIT-placements.jpg" alt="College Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#departments">Departments</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="bg-light text-center text-white py-5">
+        <div class="container">
+            <h1 class="display-4">Welcome to Our College</h1>
+            <p class="lead">Empowering Education for the Future</p>
+            <a href="#about" class="btn btn-primary mt-3">Learn More</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <h2 class="text-center">About Our College</h2>
+            <p class="lead text-center">Our college is dedicated to providing quality education and fostering innovation.</p>
+            <div class="row text-center mt-4">
+                <div class="col-lg-4">
+                    <h4>Experienced Faculty</h4>
+                    <p>Learn from experts who are leaders in their fields.</p>
+                </div>
+                <div class="col-lg-4">
+                    <h4>State-of-the-Art Facilities</h4>
+                    <p>Experience learning with cutting-edge technology.</p>
+                </div>
+                <div class="col-lg-4">
+                    <h4>Global Opportunities</h4>
+                    <p>Connect with institutions and companies around the world.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Departments Section -->
+    <section id="departments" class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center">Our Departments</h2>
+            <div class="row text-center mt-4">
+                <div class="col-lg-4">
+                    <div class="card mb-4 shadow-sm">
+                        <img src="https://via.placeholder.com/300x200.png?text=Engineering" class="card-img-top" alt="Engineering Department">
+                        <div class="card-body">
+                            <h5 class="card-title">Engineering</h5>
+                            <p class="card-text">Cutting-edge technology and research opportunities.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card mb-4 shadow-sm">
+                        <img src="https://via.placeholder.com/300x200.png?text=Business" class="card-img-top" alt="Business Department">
+                        <div class="card-body">
+                            <h5 class="card-title">Business</h5>
+                            <p class="card-text">Empowering future leaders in the corporate world.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card mb-4 shadow-sm">
+                        <img src="https://via.placeholder.com/300x200.png?text=Arts+%26+Humanities" class="card-img-top" alt="Arts & Humanities Department">
+                        <div class="card-body">
+                            <h5 class="card-title">Arts & Humanities</h5>
+                            <p class="card-text">Creativity and critical thinking for the modern world.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-5">
+        <div class="container">
+            <h2 class="text-center">What Our Students Say</h2>
+            <div class="row mt-4">
+                <div class="col-md-4">
+                    <blockquote class="blockquote text-center">
+                        <p>"This college provided me with the best opportunities to grow and learn."</p>
+                        <footer class="blockquote-footer">John Doe, Engineering Graduate</footer>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h2 class="text-center">Contact Us</h2>
+            <p class="text-center">For any inquiries, please contact us at:</p>
+            <div class="text-center">
+                <h5>Address</h5>
+                <p>123 College Street, Education City, Country</p>
+                <h5>Email</h5>
+                <p>info@college.com</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 College Name. All rights reserved.</p>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#departments">Departments</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
